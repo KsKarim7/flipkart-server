@@ -2,6 +2,7 @@
 import express from 'express';
 import Connection from './database/db.js';
 import dotenv from 'dotenv'
+import defaultData from './default.js';
 
 const app = express();
 dotenv.config();
@@ -17,3 +18,5 @@ Connection(USERNAME, PASSWORD);
 app.listen(PORT, () => {
     console.log(`Listening From PORT ${PORT}`)
 });
+
+defaultData();
